@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ViewRegsin1">
+        <attr name="regsin1_background" format="reference"></attr>
+        <attr name="regsin1_leftimg_src" format="reference"></attr>    <!--ok  左边图片默认gone-->
+        <attr name="regsin1_left_text" format="string"></attr>  <!--ok 默认验证码-->
+        <attr name="regsin1_edit_hint" format="string"></attr>   <!--ok 默认请输入验证码-->
+        <attr name="regsin1_edit_background" format="reference"></attr> <!-- edit背景默认空 -->
+        <attr name="regsin1_btn_start_text" format="string"></attr>  <!--ok 默认获取验证码-->
+        <attr name="regsin1_btn_end_text" format="string"></attr>      <!--ok 默认重新获取-->
+        <attr name="regsin1_btn_start_text_color" format="color"></attr>  <!--默认R.color.white-->
+        <attr name="regsin1_btn_end_text_color" format="color"></attr>      <!--默认R.color.black-->
+        <attr name="regsin1_btn_background" format="reference"></attr>    <!--ok 默认viewregsin1_bg-->
+        <attr name="regsin1_time" format="integer"></attr>  <!--ok 默认60-->
+    </declare-styleable>
+
+    <declare-styleable name="ViewTitleLayout1">
+        <attr name="title1_bg_color" format="color"></attr><!-- 布局背景颜色 *-->
+        <attr name="title1_paddingside" format="integer"></attr><!-- 左右间距 -->
+        <attr name="title1_text" format="string"></attr><!--title 标题文字-->
+        <attr name="title1_text_color" format="color"></attr><!--title 标题字体颜色-->
+        <attr name="title1_left1_img" format="reference"></attr><!-- 左1图片src * -->
+        <attr name="title1_left2_img" format="reference"></attr><!-- 左2图片src -->
+        <attr name="title1_right1_img" format="reference"></attr><!-- 右1图片src -->
+        <attr name="title1_right2_img" format="reference"></attr><!-- 右2图片src -->
+        <attr name="title1_right3_img" format="reference"></attr><!-- 右3图片src -->
+    </declare-styleable>
+</resources>

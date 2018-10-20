@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/myImg"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        fresco:placeholderImage="@mipmap/ic_launcher"
+        fresco:roundAsCircle="true"/>
+
+    <EditText
+        android:layout_below="@+id/myImg"
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <EditText
+        android:layout_below="@+id/username"
+        android:id="@+id/pwd"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登入"
+        android:id="@+id/btn"
+        android:layout_below="@+id/pwd"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="登出"
+        android:id="@+id/btn2"
+        android:layout_below="@+id/btn"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="btn3"
+        android:id="@+id/btn3"
+        android:layout_below="@+id/btn2"
+        android:onClick="forBtn3"/>
+
+</RelativeLayout>

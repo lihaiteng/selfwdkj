@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"/>
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="保存"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:background="#00913a"/>
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="手机号码"
+                    android:textColor="@color/blacktext"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/infomationPhoneText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/graytext"
+                    android:background="@null"
+                    android:textColor="@color/graytext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="姓名"
+                    android:textColor="@color/blacktext"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/infomationNameText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入姓名"
+                    android:textColorHint="@color/graytext"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/graytext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="身份证号"
+                    android:textColor="@color/blacktext"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/infomationCardText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入身份证号"
+                    android:textColorHint="@color/graytext"
+                    android:background="@null"
+                    android:imeOptions="actionNext"
+                    android:singleLine="true"
+                    android:textColor="@color/graytext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/yingYeInputLinear"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="营业执照号"
+                    android:textColor="@color/blacktext"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/infomationYinYeText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionNext"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:textColorHint="@color/graytext"
+                    android:hint="请输入营业执照号"
+                    android:textColor="@color/graytext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/addressInputLinear"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:weightSum="3">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="left|center_vertical"
+                    android:text="实际教学地点"
+                    android:textColor="@color/blacktext"
+                    android:textSize="16sp"/>
+
+                <EditText
+                    android:id="@+id/infomationAddressText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:imeOptions="actionDone"
+                    android:background="@null"
+                    android:hint="请输入实际教学地点"
+                    android:textColorHint="@color/graytext"
+                    android:singleLine="true"
+                    android:textColor="@color/graytext"
+                    android:textSize="16sp"/>
+            </LinearLayout>
+            <!--传照片-->
+            <LinearLayout
+                android:id="@+id/cardLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="身份证正面照"
+                    android:textColor="@color/blacktext"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/cardImgFileText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/cardImg"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="160dp"-->
+                    <!--android:scaleType="centerInside"-->
+                    <!--android:visibility="gone"/>-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/cardImg"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    fresco:roundedCornerRadius="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/greenRel"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/information_shape_linear_green"
+                    android:textColor="@color/white"
+                    android:textSize="14sp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/greenImg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/upload"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@+id/greenImg"
+                            android:text="请选择身份证正面照"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!--传照片2-->
+            <LinearLayout
+                android:id="@+id/cardLinear2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="身份证反面照"
+                    android:textColor="@color/blacktext"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/cardImg2FileText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/cardImg2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="160dp"-->
+                    <!--android:scaleType="centerInside"-->
+                    <!--android:visibility="gone"/>-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/cardImg2"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    fresco:roundedCornerRadius="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/redRel"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/information_shape_linear_red"
+                    android:textColor="@color/white"
+                    android:textSize="14sp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/redImg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/upload"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@+id/redImg"
+                            android:text="请选择身份证反面照"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!--传照片3-->
+            <LinearLayout
+                android:id="@+id/yingyeLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="营业执照"
+                    android:textColor="@color/blacktext"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/yingyeFileText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"/>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/yingyeImg"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="160dp"-->
+                    <!--android:scaleType="centerInside"-->
+                    <!--android:visibility="gone"/>-->
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/yingyeImg"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    fresco:roundedCornerRadius="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"/>
+
+                <RelativeLayout
+                    android:id="@+id/blueRel"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/information_shape_linear_blue"
+                    android:textColor="@color/white"
+                    android:textSize="14sp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/blueImg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/upload"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@+id/blueImg"
+                            android:text="请选择营业执照"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!--传照片4-->
+            <LinearLayout
+                android:id="@+id/rentalAreementLinear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="租房协议"
+                    android:textColor="@color/blacktext"
+                    android:textSize="14sp"/>
+
+                <LinearLayout
+                    android:id="@+id/rentalAreementImgLinear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/yellowRel"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/information_shape_linear_yellow"
+                    android:textColor="@color/white"
+                    android:textSize="14sp">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/yellowImg"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/upload"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_toRightOf="@+id/yellowImg"
+                            android:text="请选择租房协议照"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

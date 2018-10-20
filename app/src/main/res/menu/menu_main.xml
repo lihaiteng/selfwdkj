@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <!-- orderInCategory  顺序优先级 ...外的为一组；...内的为一组；分别比较 -->
+    <item android:id="@+id/action_a"
+        android:title="A"
+        android:orderInCategory="10"
+        android:icon="@drawable/ic_launcher"
+        app:showAsAction="ifRoom" /> <!-- 设置成ifRoom，有空位就显示，没有空位就放入 ... 中 -->
+
+    <item android:id="@+id/action_b"
+        android:title="B"
+        android:orderInCategory="20"
+        android:icon="@drawable/test_pic1"
+        app:showAsAction="ifRoom" />
+
+    <!--<item android:id="@+id/action_selfmore"-->
+        <!--android:title="more"-->
+        <!--android:orderInCategory="30"-->
+        <!--android:icon="@drawable/test_pic1"-->
+        <!--app:showAsAction="ifRoom" />-->
+
+    <item android:id="@+id/action_c"
+        android:title="C"
+        android:actionLayout="@layout/test_menu_item"
+        android:orderInCategory="10"
+        app:showAsAction="never" /><!-- 设置成never，那么就是最右边的 ...  -->
+
+    <item android:id="@+id/action_d"
+        android:title="D"
+        android:orderInCategory="20"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_e"
+        android:title="E"
+        android:orderInCategory="30"
+        app:showAsAction="never" />
+</menu>
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+        android:id="@+id/addBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="新增会员"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:background="#00913a"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#999"
+        android:layout_above="@+id/addBtn">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

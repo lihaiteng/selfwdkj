@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--toolsbar-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/OverflowStyle"></android.support.v7.widget.Toolbar>
+
+    <!--自定义titlelayout-->
+    <view.myview.ViewTitleLayout1
+        android:id="@+id/title"
+        android:layout_below="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        app:title1_left1_img="@drawable/ic_launcher"
+        app:title1_right1_img="@drawable/test_pic1">
+
+    </view.myview.ViewTitleLayout1>
+
+    <TextView
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:textColor="@color/red"
+        android:text="哈哈啊哈"
+        android:id="@+id/text"/>
+
+    <FrameLayout
+        android:id="@+id/aaa"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bbb"
+        android:layout_below="@+id/text"/>
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/bbb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+    </android.support.v4.app.FragmentTabHost>
+
+
+
+
+
+
+
+
+</RelativeLayout>

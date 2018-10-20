@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.turui.yuncheng">
+
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <application
+        android:name="app.WDApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.turui.yuncheng.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <service
+            android:name="netty.udp.UdpRemoteService"
+            android:process=":remote">
+        </service>
+        <receiver android:name="broadcastreceiver.NetWorkBSRer"
+            android:label="NetWorkBSRer" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="broadcastreceiver.OpenActivityRes"
+            android:process=":remote">
+        </receiver>
+        <!--银联-->
+        <uses-library android:name="org.simalliance.openmobileapi" android:required="false"/>
+
+        <activity android:name="activity.StartActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!--友盟 begin-->
+        <!--<activity-->
+        <!--android:name="com.umeng.socialize.editorpage.ShareActivity"-->
+        <!--android:excludeFromRecents="true"-->
+        <!--android:theme="@style/Theme.UMDefault" />-->
+        <!-- wechat callback-->
+        <!--<activity-->
+            <!--android:name="yunchengheng.wxapi.WXEntryActivity"-->
+            <!--android:configChanges="keyboardHidden|orientation|screenSize"-->
+            <!--android:exported="true"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@android:style/Theme.Translucent.NoTitleBar" />-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a2e217af43e48668b000427">
+        </meta-data>
+        <!--友盟 end-->
+        <!--WX start-->
+        <!--<activity-->
+            <!--android:name=".wxapi.WXPayEntryActivity"-->
+            <!--android:exported="true"-->
+            <!--android:launchMode="singleTop"/>-->
+        <!--EX end-->
+        <!--alipay sdk begin-->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" >
+        </activity>
+        <!--alipay sdk end-->
+        <!--yinlian begin-->
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <!--yinlian end-->
+
+
+        <activity android:name="activity.SplashActivity"/>
+
+        <!-- test  start -->
+        <activity android:name="zztest.utils.TestPhoneUtil"/>
+
+        <!--<activity android:name="zztest.service.TestDownAPKServiceActivity"/>-->
+
+        <activity android:name="zztest.activity.base.TestBaseActivity"> </activity>
+
+        <activity android:name="zztest.activity.fragment.test.Test1FragmentsMainActivity"> </activity>
+
+        <activity android:name="zztest.activity.fragment.test2.Test2FragmentMainActivity"> </activity>
+
+        <activity android:name="zztest.activity.appcompat.TestLearnToolBarActivity"> </activity>
+
+        <activity android:name="zztest.activity.appcompat.TestUseToolBarActivity"> </activity>
+
+        <activity android:name="zztest.view.myview.TestTItleAndRegsin1Activity"> </activity>
+
+        <activity android:name="zztest.http.TestLearnRetrofitActivity"></activity>
+
+        <activity android:name="zztest.picload.TestFresoActivity"></activity>
+
+        <activity android:name="zztest.utils.log.TestLogActivity"></activity>
+
+        <activity android:name="zztest.view.recyclerview.xrecyclerview.TestXRecyclerViewActivity"></activity>
+
+        <activity android:name="zztest.view.recyclerview.swiperefreshlayout.TestSwipeRefreshLayoutActivity"></activity>
+
+        <activity android:name="zztest.view.recyclerview.recyclerview.TestRecyclerviewActivity"/>
+
+        <activity android:name="zztest.utils.sharedpreferences.TestSPActivity"/>
+
+        <activity android:name="zztest.view.webview.TestWebViewActivity"/>
+
+        <activity android:name="zztest.utils.choosephoto.TestPhotoPicterActivity"/>
+
+        <activity android:name="zztest.view.somesimple.TestSwitchButtonActivity"/>
+
+        <activity android:name="zztest.nettytcpdemo.ui.Netty1Activity"/>
+
+        <service android:name="zztest.nettytcpdemo.service.ServerService" />
+
+        <activity android:name="zztest.nettyudpdemo.Netty2Activity"/>
+
+        <service android:name="zztest.nettyudpdemo.UdpServerService"/>
+
+        <activity android:name="zztest.netty.TestUdpRemoteActivity"/>
+
+        <activity android:name="zztest.vedio.VedioViewActivity"/>
+        <!-- test  end -->
+
+    </application>
+
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <!--<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/> 需要用户授权的权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!--银联-->
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.nfc.hce"/>
+
+</manifest>

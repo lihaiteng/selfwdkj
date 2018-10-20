@@ -1,0 +1,39 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <view.myview.ViewTitleLayout1
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        app:title1_bg_color="@color/black"
+        app:title1_text_color="@color/white"
+        app:title1_text="LHT"
+        app:title1_left1_img="@color/white"
+        app:title1_left2_img="@color/white"
+        app:title1_right1_img="@color/white"
+        app:title1_right2_img="@color/white"
+        app:title1_right3_img="@color/white"
+        app:title1_paddingside="0">
+
+    </view.myview.ViewTitleLayout1>
+
+    <view.myview.ViewRegsin1
+        android:id="@+id/viewRegsin1"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:regsin1_background="@color/red"
+        app:regsin1_btn_start_text="获取验证码"
+        app:regsin1_btn_end_text="点击再次获取"
+        app:regsin1_btn_start_text_color="@color/red"
+        app:regsin1_btn_end_text_color="@color/black"
+        app:regsin1_btn_background="@drawable/b_viewregsin1_bg"
+        app:regsin1_edit_background="@drawable/b_shape_rel_border"
+        app:regsin1_time="5"
+        app:regsin1_edit_hint="输入验证码"
+        app:regsin1_left_text="输入"
+        app:regsin1_leftimg_src="@drawable/test_pic1"/>
+
+</RelativeLayout>

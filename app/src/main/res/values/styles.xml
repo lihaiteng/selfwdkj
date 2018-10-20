@@ -1,0 +1,87 @@
+<resources>
+    <!--App主题样式-->
+    <style name="AppTheme" parent="AppTheme.Base">
+        <item name="android:listDivider">@drawable/test_shape_listdivider</item><!--recycler 分割线颜色 无效的 无用占时留着-->
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--需要在toolbar中手动添加android:background="?attr/colorPrimary"-->
+        <item name="colorPrimaryDark">@color/colorPrimaryDrak</item>
+        <item name="android:colorForeground">@color/windowForeground</item>
+        <item name="android:colorBackground">@color/windowBackground</item>
+        <item name="android:textColorPrimary">@color/titleTextColor</item>
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--<item name="android:windowNoTitle">true</item>-->
+        <!-- 使用 API Level 22 編譯的話，要拿掉前綴字 -->
+        <item name="windowNoTitle">true</item><!--必须字段-->
+        <!--高度 需要在toolbar中手动添加 ndroid:layout_height="?attr/actionBarSize"-->
+        <item name="actionBarSize">50dp</item>
+        <!--<item name="windowActionBar">false</item>-->
+        <!--<item name="android:textColor">@color/textColor</item>&lt;!&ndash;默认字体颜色&ndash;&gt;-->
+        <!--<item name="toolbarStyle">@style/ToolsBarStyle</item>-->
+    </style>
+
+    <style name="ToolsBarStyle" parent="Widget.AppCompat.Toolbar">
+    </style>
+
+    <!--toolsbar 菜单样式-->
+    <!--toolbar加属性 app:popupTheme="@style/OverflowStyle"-->
+    <style name="OverflowStyle" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!-- 是否覆盖锚点，默认为true，即盖住Toolbar --><!-- 有效 -->
+        <item name="overlapAnchor">false</item>
+        <!-- 弹出层背景颜色 --><!-- 有效 -->
+        <item name="android:colorBackground">@color/red</item>
+        <!-- 设置弹出菜单文字颜色 --><!-- 有效 -->
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!--字体样式-->
+    <style name="TextSizeA">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextSizeB">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextSizeC">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextColorWhite">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="TextColorBlack">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!--  item 如：个人中心 下面的item-->
+    <style name="Item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/item_operation_height</item>
+        <item name="android:paddingLeft">@dimen/padding_side</item>
+        <item name="android:paddingRight">@dimen/padding_side</item>
+    </style>
+
+    <!--item left img -->
+    <style name="ItemLeftImg">
+        <item name="android:layout_width">@dimen/item_side_img_size</item>
+        <item name="android:layout_height">@dimen/item_side_img_size</item>
+    </style>
+
+    <!--item text-->
+    <style name="ItemText">
+        <item name="android:textSize">@dimen/item_left_text_size</item>
+        <item name="android:textColor">@color/item_left_text_color</item>
+    </style>
+
+    <!--item edittext-->
+    <style name="ItemEdit">
+        <item name="android:textSize">@dimen/item_text_size</item>
+        <item name="android:textColor">@color/item_left_text_color</item>
+        <item name="android:textColorHint">@color/item_edit_hint_color</item>
+    </style>
+
+
+    <!--友盟-->
+    <style parent="android:style/Theme.NoTitleBar" name="Theme.UMDefault"/>
+
+</resources>

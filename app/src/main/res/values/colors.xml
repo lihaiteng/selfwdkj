@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="gray6">#666666</color>
+    <color name="green">#00ff00</color>
+    <color name="red">#ff0000</color>
+
+    <!--以style优先级最高，其次Theme Editor为准-->
+    <!--是否真正有效 要看 Theme Editor中是否有使用-->
+    <!-- 如状态栏颜色，toolbar actionBar 背景色等  在style中使用-->
+    <color name="colorPrimaryDrak">#303030</color>  <!--最顶部的状态栏 -->
+    <color name="colorPrimary">#303030</color>   <!--toolbar or actionbar-->
+    <color name="windowBackground">@color/white</color>  <!-- 窗口背景色 -->
+    <color name="windowForeground">@color/white</color>
+    <color name="navigationBarColor">#303030</color>  <!-- 5.0   21 的有导航栏背景色 -->
+    <color name="titleTextColor">@color/white</color>  <!-- 大title文字颜色-->
+    <!-- colorAccent 为 colorControlActivated 的默认值，
+    colorControlActivated值为用户显示控件的高亮状态和进度条勾选光标dialog选择字体等颜色-->
+    <color name="colorAccent">#019285</color>
+
+    <!--全局颜色-->
+    <color name="rel_border_color">#cccccc</color>
+    <color name="textColor">@color/black</color>
+    <color name="enable_bg_color">@color/green</color>
+    <color name="disable_bg_color">@color/gray6</color>
+    <color name="enable_text_color">@color/white</color>
+    <color name="disable_text_color">@color/black</color>
+
+    <!--input item-->
+    <color name="item_left_text_color">@color/black</color>
+    <color name="item_edit_hint_color">@color/gray6</color>
+
+    <color name="item_btn_enable_color">@color/enable_bg_color</color>
+    <color name="item_btn_disable_color">@color/disable_bg_color</color>
+    <color name="item_btn_enable_text_color">@color/enable_text_color</color>
+    <color name="item_btn_disable_text_color">@color/disable_text_color</color>
+
+    <!--tabhost spec-->
+    <color name="spec_text_color">@color/red</color> <!--tab 没有选中时的字体颜色-->
+    <color name="spec_choosed_text_color">@color/green</color><!--tab 选中时的字体颜色-->
+    <color name="primary_material_dark">#303030</color>
+    <color name="primary_dark_material_dark">#303030</color>
+
+    <!--HDJY-->
+    <!--电话号码推荐码字体颜色-->
+    <color name="graytext">#999</color>
+    <!--列表背景色-->
+    <color name="bg">#f4f4f4</color>
+    <!--列表左边字体颜色-->
+    <color name="blacktext">#303030</color>
+    <!--红蓝绿-->
+    <color name="blue_three">#2580c5</color>
+    <color name="red_three">#de2f07</color>
+    <color name="green_three">#27b144</color>
+</resources>

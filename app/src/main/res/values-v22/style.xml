@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!--Navigation bar color 导航栏的颜色-->
+        <item name="android:navigationBarColor">@color/navigationBarColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDrak</item>
+        <item name="android:colorForeground">@color/windowForeground</item>
+        <item name="android:colorBackground">@color/windowBackground</item>
+        <item name="android:textColorPrimary">@color/titleTextColor</item>
+    </style>
+</resources>
